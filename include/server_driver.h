@@ -10,6 +10,8 @@ class ServerDriver : public vr::IServerTrackedDeviceProvider
 public:
     virtual ~ServerDriver();
 
+    TrackedDevice* getTrackedDeviceById(uint32_t id) const;
+
 protected:
     virtual vr::EVRInitError onInit(std::vector<std::unique_ptr<TrackedDevice>>& devices);
     virtual void onShutdown();
@@ -34,6 +36,6 @@ private:
     void EnterStandby() override;
     void LeaveStandby() override;
 
-    vr::IServerDriverHost* driverHost;
+    vr::IServerDriverHost* driverHost = nullptr;
     std::vector<std::unique_ptr<TrackedDevice>> trackedDevices;
 };

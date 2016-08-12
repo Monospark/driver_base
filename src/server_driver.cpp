@@ -17,6 +17,15 @@ void ServerDriver::onStandbyEnter() {}
 
 void ServerDriver::onStandbyLeave() {}
 
+TrackedDevice* ServerDriver::getTrackedDeviceById(uint32_t id) const
+{
+    if (id >= trackedDevices.size()) {
+        return nullptr;
+    }
+
+    return trackedDevices[id].get();
+}
+
 vr::EVRInitError ServerDriver::Init(
     vr::IDriverLog* pDriverLog,
     vr::IServerDriverHost* pDriverHost,
@@ -48,12 +57,7 @@ uint32_t ServerDriver::GetTrackedDeviceCount()
 
 vr::ITrackedDeviceServerDriver* ServerDriver::GetTrackedDeviceDriver(uint32_t unWhich)
 {
-    if (unWhich >= trackedDevices.size())
-    {
-        return nullptr;
-    }
-
-    return trackedDevices[unWhich].get();
+    getTrackedDeviceById(unWhich);
 }
 
 vr::ITrackedDeviceServerDriver* ServerDriver::FindTrackedDeviceDriver(const char* pchId)
