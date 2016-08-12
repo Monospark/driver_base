@@ -1,0 +1,7 @@
+build/
+lib/
+*.opensdf
+*.sdf
+*.suo
+*.user
+*.filters
