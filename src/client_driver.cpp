@@ -4,7 +4,7 @@
 
 ClientDriver::~ClientDriver() {}
 
-vr::EVRInitError ClientDriver::onInit()
+vr::EVRInitError ClientDriver::onInit(vr::EClientDriverMode driverMode)
 {
     return vr::VRInitError_None;
 }
@@ -28,16 +28,10 @@ vr::EVRInitError ClientDriver::Init(
     const char* pchUserDriverConfigDir,
     const char* pchDriverInstallDir)
 {
-    if (eDriverMode == vr::EClientDriverMode::ClientDriverMode_Watchdog)
-    {
-        Logger::get().log("Watchdog mode was requested but is not available");
-        return vr::VRInitError_Init_NotAvailableToWatchdogApps;
-    }
-
     clientDriverHost = pDriverHost;
     Logger::init(pDriverLog);
     Logger::get().log("Starting up client driver");
-    return onInit();
+    return onInit(eDriverMode);
 }
 
 void ClientDriver::Cleanup()

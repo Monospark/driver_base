@@ -9,7 +9,7 @@ public:
     virtual ~ClientDriver();
 
 protected:
-    virtual vr::EVRInitError onInit();
+    virtual vr::EVRInitError onInit(vr::EClientDriverMode driverMode);
     virtual void onShutdown();
     virtual bool isHmdPresent();
     virtual vr::HiddenAreaMesh_t getHiddenAreaMesh(vr::EVREye eEye);
@@ -33,5 +33,4 @@ private:
         uint32_t unBufferLen) override;
 
     vr::IClientDriverHost* clientDriverHost;
-    bool running;
 };
