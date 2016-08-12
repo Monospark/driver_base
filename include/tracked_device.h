@@ -68,7 +68,7 @@ protected:
     virtual void onActivate();
     virtual void onDeactivate();
     virtual void onPowerOff();
-    virtual void update();
+    virtual bool update();
 
 private:
     vr::EVRInitError Activate(uint32_t unObjectId) override;

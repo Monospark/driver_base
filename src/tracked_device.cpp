@@ -141,7 +141,10 @@ void TrackedDevice::onDeactivate() {}
 
 void TrackedDevice::onPowerOff() {}
 
-void TrackedDevice::update() {}
+bool TrackedDevice::update()
+{
+    return false;
+}
 
 vr::EVRInitError TrackedDevice::Activate(uint32_t unObjectId) {
     objectId = unObjectId;

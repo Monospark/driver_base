@@ -72,8 +72,10 @@ void ServerDriver::RunFrame()
 {
     for (const std::unique_ptr<TrackedDevice>& d : trackedDevices)
     {
-        d->update();
-        driverHost->TrackedDevicePoseUpdated(d->getId(), d->getPose());
+        if (d->update())
+        {
+            driverHost->TrackedDevicePoseUpdated(d->getId(), d->getPose());
+        }
     }
     onUpdate();
 }
