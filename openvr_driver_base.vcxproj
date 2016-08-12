@@ -15,7 +15,6 @@
     <ClCompile Include="src\component.cpp" />
     <ClCompile Include="src\controller.cpp" />
     <ClCompile Include="src\display_component.cpp" />
-    <ClCompile Include="src\driver_factory.cpp" />
     <ClCompile Include="src\hmd.cpp" />
     <ClCompile Include="src\logger.cpp" />
     <ClCompile Include="src\mathhelper.cpp" />
