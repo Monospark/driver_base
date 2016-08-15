@@ -1,6 +1,7 @@
 #include "logger.h"
 
 #include <stdarg.h>
+#include <openvr/openvr_driver.h>
 
 std::unique_ptr<Logger> Logger::instance;
 

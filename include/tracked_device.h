@@ -1,6 +1,6 @@
 #pragma once
 
-#include <openvr_driver.h>
+#include <openvr/openvr_driver.h>
 #include <vector>
 #include "component.h"
 #include <memory>
@@ -53,7 +53,6 @@ public:
     virtual ~TrackedDevice();
 
     uint32_t getId() const;
-    const vr::DriverPose_t& getPose() const;
 
 protected:
     vr::DriverPose_t pose;

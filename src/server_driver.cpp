@@ -57,7 +57,7 @@ uint32_t ServerDriver::GetTrackedDeviceCount()
 
 vr::ITrackedDeviceServerDriver* ServerDriver::GetTrackedDeviceDriver(uint32_t unWhich)
 {
-    getTrackedDeviceById(unWhich);
+    return getTrackedDeviceById(unWhich);
 }
 
 vr::ITrackedDeviceServerDriver* ServerDriver::FindTrackedDeviceDriver(const char* pchId)
@@ -78,7 +78,7 @@ void ServerDriver::RunFrame()
     {
         if (d->update())
         {
-            driverHost->TrackedDevicePoseUpdated(d->getId(), d->getPose());
+            driverHost->TrackedDevicePoseUpdated(d->getId(), d->GetPose());
         }
     }
     onUpdate();

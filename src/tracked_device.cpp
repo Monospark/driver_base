@@ -5,7 +5,6 @@ TrackedDevice::TrackedDevice(
     const std::vector<std::shared_ptr<Component>>& components,
     const Data& trackedDeviceData)
     : trackedDeviceData(trackedDeviceData)
-    , pose(pose)
     , objectId(vr::k_unTrackedDeviceIndexInvalid)
     , components(components) {
 }
@@ -258,9 +257,4 @@ vr::HmdMatrix34_t TrackedDevice::GetMatrix34TrackedDeviceProperty(
 uint32_t TrackedDevice::getId() const
 {
     return objectId;
-}
-
-const vr::DriverPose_t& TrackedDevice::getPose() const
-{
-    return pose;
 }

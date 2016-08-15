@@ -1,8 +1,11 @@
 #pragma once
 
 #include <string>
-#include <openvr_driver.h>
 #include <memory>
+
+namespace vr {
+class IDriverLog;
+}
 
 class Logger final
 {

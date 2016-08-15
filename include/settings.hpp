@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <openvr_driver.h>
+#include <openvr/openvr_driver.h>
 #include <memory>
 
 namespace Settings

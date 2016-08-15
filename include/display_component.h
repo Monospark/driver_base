@@ -1,7 +1,7 @@
 #pragma once
 
 #include "component.h"
-#include <openvr_driver.h>
+#include <openvr/openvr_driver.h>
 
 class DisplayComponent final : public Component, public vr::IVRDisplayComponent
 {

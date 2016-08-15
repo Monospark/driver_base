@@ -1,6 +1,6 @@
 #pragma once
 
-#include <openvr_driver.h>
+#include <openvr/openvr_driver.h>
 #include <memory>
 #include <vector>
 #include "tracked_device.h"
@@ -20,7 +20,6 @@ protected:
     virtual void onStandbyLeave();
 
 private:
-
     vr::EVRInitError Init(
         vr::IDriverLog* pDriverLog,
         vr::IServerDriverHost* pDriverHost,
