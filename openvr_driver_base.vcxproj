@@ -32,6 +32,7 @@
     <ClInclude Include="include\client_driver.h" />
     <ClInclude Include="include\component.h" />
     <ClInclude Include="include\display_component.h" />
+    <ClInclude Include="include\driver_base_api.h" />
     <ClInclude Include="include\hmd.h" />
     <ClInclude Include="include\logger.h" />
     <ClInclude Include="include\server_driver.h" />
@@ -88,11 +89,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>lib\win64\</OutDir>
-    <TargetName>driver_base</TargetName>
+    <TargetName>driver_based</TargetName>
     <IntDir>build\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>driver_base</TargetName>
+    <TargetName>driver_based</TargetName>
     <IntDir>build\$(Platform)\$(Configuration)\</IntDir>
     <OutDir>lib\win32\</OutDir>
   </PropertyGroup>
@@ -122,6 +123,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>include\;external\include\</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

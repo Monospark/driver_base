@@ -4,13 +4,14 @@
 #include <memory>
 #include <vector>
 #include "tracked_device.h"
+#include <driver_base_api.h>
 
 class ServerDriver : public vr::IServerTrackedDeviceProvider
 {
 public:
     virtual ~ServerDriver();
 
-    TrackedDevice* getTrackedDeviceById(uint32_t id) const;
+    DRIVER_BASE_API TrackedDevice* getTrackedDeviceById(uint32_t id) const;
 
 protected:
     virtual vr::EVRInitError onInit(std::vector<std::unique_ptr<TrackedDevice>>& devices);
