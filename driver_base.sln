@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openvr_driver_base", "openvr_driver_base.vcxproj", "{D7B8A95B-6862-48ED-9E35-4D547AAD28EF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "driver_base", "driver_base.vcxproj", "{D7B8A95B-6862-48ED-9E35-4D547AAD28EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

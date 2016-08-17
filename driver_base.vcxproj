@@ -42,7 +42,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D7B8A95B-6862-48ED-9E35-4D547AAD28EF}</ProjectGuid>
-    <RootNamespace>openvr_driver_base</RootNamespace>
+    <RootNamespace>driver_base</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
